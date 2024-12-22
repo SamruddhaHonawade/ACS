@@ -1,0 +1,7 @@
+
+echo -n "welcome" | md5sum | tr -d ' -' > dvshashes.txt  
+
+
+hashcat -m 0 -a 0 -o cracked_pwd.txt dvshashes.txt /usr/share/wordlists/rockyou.txt.gz
+
+ cat cracked_pwd.txt   
